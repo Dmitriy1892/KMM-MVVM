@@ -1,14 +1,14 @@
-#KMM-MVVM
-##About
+# KMM-MVVM
+## About
 KMM-MVVM is a library with ViewModel classes and extensions for Kotlin Multiplatform Mobile development.
 
-##Download
+## Download
 Add the following dependency into the build.gradle file to the dependencies block:
 implementation("io.github.dmitriy1892.kmm:kmm-mvvm-core:0.0.1")
 implementation("io.github.dmitriy1892.kmm:kmm-mvvm-compose:0.0.1")
 implementation("io.github.dmitriy1892.kmm:kmm-mvvm-koin:0.0.1")
 
-##License
+## License
 
 Unless required by applicable law or
 agreed to in writing, Licensor provides the Work (and each
