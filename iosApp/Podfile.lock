@@ -1,0 +1,16 @@
+PODS:
+  - KmmMvvmCore (1.0)
+
+DEPENDENCIES:
+  - KmmMvvmCore (from `../kmm-mvvm-core`)
+
+EXTERNAL SOURCES:
+  KmmMvvmCore:
+    :path: "../kmm-mvvm-core"
+
+SPEC CHECKSUMS:
+  KmmMvvmCore: e2f444a295164b9cc39b4290124204eeb73db83a
+
+PODFILE CHECKSUM: fabeb5823eb1dda51778cadcd6e2ec2a0de8c305
+
+COCOAPODS: 1.12.0
