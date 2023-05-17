@@ -2,9 +2,9 @@ package com.coldfier.kmm.mvvm.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.compositionLocalOf
+import com.coldfier.kmm.mvvm.compose.store.ViewModelStore
 import com.coldfier.kmm.mvvm.core.BaseViewModel
 import com.coldfier.kmm.mvvm.core.factory.BaseViewModelFactory
-import com.coldfier.kmm.mvvm.core.store.ViewModelStore
 
 val KmmViewModelStore = compositionLocalOf<ViewModelStore> {
     error("ViewModelStore is not provided to the CompositionLocal named 'KmmViewModelStore'")

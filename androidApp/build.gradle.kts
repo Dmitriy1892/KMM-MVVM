@@ -8,6 +8,7 @@ kotlin {
             dependencies {
                 implementation(project(":kmm-mvvm-core"))
                 implementation(project(":kmm-mvvm-compose"))
+                implementation(project(":sample"))
 
                 implementation(libs.bundles.androidApp)
             }

@@ -1,17 +1,11 @@
-package com.coldfier.kmm.mvvm.core.store
+package com.coldfier.kmm.mvvm.compose.store
 
 import com.coldfier.kmm.mvvm.core.BaseViewModel
 import com.coldfier.kmm.mvvm.core.factory.BaseViewModelFactory
 
-class ViewModelStore {
+actual class ViewModelStore {
 
     private val viewModels = mutableMapOf<String, BaseViewModel>()
-
-    fun add(key: String, viewModel: BaseViewModel) {
-        if (viewModels[key] == null) viewModels[key] = viewModel
-    }
-    
-    fun <T: BaseViewModel> get(key: String): T = viewModels[key] as T
 
     fun <T: BaseViewModel> getOrCreate(
         key: String,
@@ -27,5 +21,7 @@ class ViewModelStore {
         } else cachedViewModel as T
     }
 
-    fun remove(key: String) = viewModels.remove(key)
+    actual fun remove(key: String) {
+        viewModels.remove(key)?.clear()
+    }
 }

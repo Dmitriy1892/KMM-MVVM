@@ -176,10 +176,10 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${PODS_ROOT}/../../kmm-mvvm-core/build/cocoapods/framework/KmmMvvmCore.framework"
+  install_framework "${PODS_ROOT}/../../sample/build/cocoapods/framework/SampleSDK.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${PODS_ROOT}/../../kmm-mvvm-core/build/cocoapods/framework/KmmMvvmCore.framework"
+  install_framework "${PODS_ROOT}/../../sample/build/cocoapods/framework/SampleSDK.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

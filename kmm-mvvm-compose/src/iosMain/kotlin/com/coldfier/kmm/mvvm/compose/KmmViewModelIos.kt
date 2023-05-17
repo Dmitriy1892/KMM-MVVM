@@ -1,8 +1,8 @@
 package com.coldfier.kmm.mvvm.compose
 
+import com.coldfier.kmm.mvvm.compose.store.ViewModelStore
 import com.coldfier.kmm.mvvm.core.BaseViewModel
 import com.coldfier.kmm.mvvm.core.factory.BaseViewModelFactory
-import com.coldfier.kmm.mvvm.core.store.ViewModelStore
 import com.coldfier.kmm.mvvm.core.viewModelKey
 
 actual inline fun <reified T: BaseViewModel> kmmViewModelInternal(

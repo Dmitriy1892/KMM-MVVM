@@ -1,5 +1,5 @@
 target 'iosApp' do
   use_frameworks!
   platform :ios, '14.1'
-  pod 'KmmMvvmCore', :path => '../kmm-mvvm-core'
+  pod 'SampleSDK', :path => '../sample'
 end

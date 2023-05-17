@@ -1,16 +1,16 @@
 PODS:
-  - KmmMvvmCore (1.0)
+  - SampleSDK (1.0)
 
 DEPENDENCIES:
-  - KmmMvvmCore (from `../kmm-mvvm-core`)
+  - SampleSDK (from `../sample`)
 
 EXTERNAL SOURCES:
-  KmmMvvmCore:
-    :path: "../kmm-mvvm-core"
+  SampleSDK:
+    :path: "../sample"
 
 SPEC CHECKSUMS:
-  KmmMvvmCore: e2f444a295164b9cc39b4290124204eeb73db83a
+  SampleSDK: f828cfe346482b762b19eab1a06fc6f8567aab62
 
-PODFILE CHECKSUM: fabeb5823eb1dda51778cadcd6e2ec2a0de8c305
+PODFILE CHECKSUM: 597fac980b1c65961319ec63cbfa132594da1abb
 
 COCOAPODS: 1.12.0

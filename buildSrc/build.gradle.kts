@@ -8,6 +8,7 @@ dependencies {
     implementation(libs.gradleplugins.kotlin)
     implementation(libs.gradleplugins.compose)
     implementation(libs.gradleplugins.android)
+    implementation(libs.gradleplugin.ksp)
     implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
 }
 

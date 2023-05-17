@@ -36,7 +36,8 @@ kotlin {
 
         androidMain {
             dependencies {
-                implementation(libs.androidx.lifecycle.compose.viewmodel)
+                api(libs.androidx.lifecycle.viewmodel)
+                api(libs.androidx.lifecycle.compose.viewmodel)
             }
         }
     }
