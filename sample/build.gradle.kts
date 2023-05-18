@@ -16,7 +16,7 @@ kotlin {
             baseName = "SampleSDK"
         }
     }
-    
+
     sourceSets {
         commonMain {
             dependencies {

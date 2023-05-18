@@ -42,6 +42,8 @@ compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose" 
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
 [libraries]
 
 gradleplugin-ksp = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
@@ -66,6 +68,7 @@ kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutine
 
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin-annotations" }
+koin-ksp-compiler = { module = "io.insert-koin:koin-ksp-compiler", version.ref = "koin-annotations" }
 
 kmm-utils = { module = "io.github.dmitriy1892.kmm:kmm-utils", version.ref = "kmm-utils" }
 
