@@ -17,7 +17,7 @@ dependencyResolutionManagement {
 rootProject.name = "KMM-MVVM"
 
 include(":androidApp")
-include(":kmm-mvvm-core")
-include(":kmm-mvvm-compose")
-include(":kmm-mvvm-koin")
+include(":mvvm-core")
+include(":mvvm-compose")
+include(":mvvm-koin")
 include(":sample")

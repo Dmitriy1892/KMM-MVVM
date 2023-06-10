@@ -6,8 +6,8 @@ kotlin {
     sourceSets {
         androidMain {
             dependencies {
-                implementation(project(":kmm-mvvm-core"))
-                implementation(project(":kmm-mvvm-compose"))
+                implementation(project(":mvvm-core"))
+                implementation(project(":mvvm-compose"))
                 implementation(project(":sample"))
 
                 implementation(libs.bundles.androidApp)
@@ -17,10 +17,10 @@ kotlin {
 }
 
 android {
-    namespace = "com.coldfier.kmm.mvvm.android"
+    namespace = "io.github.dmitriy1892.kmm.mvvm.android"
 
     defaultConfig {
-        applicationId = "com.coldfier.kmm.mvvm.android"
+        applicationId = "io.github.dmitriy1892.kmm.mvvm.android"
 
         val versionMajor = libs.versions.appVersionMajor.get().toInt()
         val versionMinor = libs.versions.appVersionMinor.get().toInt()
