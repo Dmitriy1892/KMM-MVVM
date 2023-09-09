@@ -28,7 +28,7 @@ ksp = "1.8.20-1.0.11"
 koin = "3.4.0"
 koin-annotations = "1.0.2"
 
-kmm-utils = "0.0.3"
+kmm-utils = "0.0.4"
 
 [plugins]
 

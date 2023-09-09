@@ -1,6 +1,6 @@
 package io.github.dmitriy1892.kmm.sample.sample.ui.two
 
-import io.github.dmitriy1892.kmm.mvvm.core.MviViewModel
+import io.github.dmitriy1892.kmm.mvvm.core.UdfViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -9,7 +9,7 @@ import org.koin.core.annotation.InjectedParam
 
 class ScreenTwoViewModel(
     @InjectedParam val argumentFromFirstScreen: String
-) : MviViewModel<ScreenTwoState, ScreenTwoSideEffect>() {
+) : UdfViewModel<ScreenTwoState, ScreenTwoSideEffect>() {
 
     override val _screenState: MutableStateFlow<ScreenTwoState> =
         MutableStateFlow(ScreenTwoState(argumentFromFirstScreen))

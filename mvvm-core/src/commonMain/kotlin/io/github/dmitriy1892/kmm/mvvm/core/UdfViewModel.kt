@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.receiveAsFlow
 
-abstract class MviViewModel<State: Any, SideEffect: Any> : BaseViewModel() {
+abstract class UdfViewModel<State: Any, SideEffect: Any> : BaseViewModel() {
 
     protected abstract val _screenState: MutableStateFlow<State>
     val screenState: WrappedStateFlow<State>
