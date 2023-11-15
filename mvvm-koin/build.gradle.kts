@@ -9,7 +9,7 @@ group = "io.github.dmitriy1892.kmm"
 version = getMyLibraryVersion()
 
 kotlin {
-    android {
+    androidTarget {
         publishLibraryVariants("release", "debug")
     }
     

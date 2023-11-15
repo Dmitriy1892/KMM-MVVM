@@ -14,6 +14,6 @@ abstract class UdfViewModel<State: Any, SideEffect: Any> : BaseViewModel() {
         get() = WrappedStateFlow(_screenState.asStateFlow())
 
     protected val _sideEffectFlow = EventMutableSharedFlow<SideEffect>()
-    val sideEffectFlow: WrappedSharedFlow<SideEffect> =
-        _sideEffectFlow.asWrappedSharedFlow()
+    val sideEffectFlow: WrappedSharedFlow<SideEffect>
+        get() = _sideEffectFlow.asWrappedSharedFlow()
 }

@@ -9,7 +9,7 @@ group = "io.github.dmitriy1892.kmm"
 version = getMyLibraryVersion()
 
 kotlin {
-    android {
+    androidTarget {
         publishLibraryVariants("release", "debug")
     }
     
@@ -24,6 +24,8 @@ kotlin {
         androidMain {
             dependencies {
                 implementation(libs.androidx.lifecycle.viewmodel)
+                implementation(libs.androidx.activity)
+                implementation(libs.androidx.fragment)
             }
         }
     }
