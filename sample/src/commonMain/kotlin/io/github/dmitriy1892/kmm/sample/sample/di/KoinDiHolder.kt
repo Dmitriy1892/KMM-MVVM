@@ -1,6 +1,6 @@
 package io.github.dmitriy1892.kmm.sample.sample.di
 
-import io.github.dmitriy1892.kmm.utils.coroutines.withThreadLock
+import io.github.dmitriy1892.kmm.utils.coroutines.mutex.withThreadLock
 import io.github.dmitriy1892.kmm.utils.platform.PlatformConfiguration
 import kotlinx.coroutines.sync.Mutex
 import org.koin.core.Koin

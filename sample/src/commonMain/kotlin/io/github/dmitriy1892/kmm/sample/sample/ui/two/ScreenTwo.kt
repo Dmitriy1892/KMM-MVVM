@@ -30,7 +30,7 @@ fun ScreenTwo(
 
     var oneTimeEvent = remember { "" }
 
-    when (val effect = sideEffect) {
+    when (sideEffect) {
         ScreenTwoSideEffect.ShowError -> oneTimeEvent = "Error"
         ScreenTwoSideEffect.ShowSuccess -> oneTimeEvent = "Success"
         ScreenTwoSideEffect.CloseScreen -> {

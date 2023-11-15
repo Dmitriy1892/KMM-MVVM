@@ -1,19 +1,17 @@
 plugins {
     id("multiplatform-compose-setup")
-    kotlin("native.cocoapods")
 }
 
 kotlin {
-    cocoapods {
-        summary = "Some description for the Shared Module"
-        homepage = "Link to the Shared Module homepage"
-        version = "1.0"
-        ios.deploymentTarget = libs.versions.iosTargetVersion.get()
-        podfile = project.file("../iosApp/Podfile")
-        name = "SampleSDK"
-        framework {
-            isStatic = true
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
             baseName = "SampleSDK"
+            transitiveExport = false
+            isStatic = true
         }
     }
 
@@ -27,6 +25,14 @@ kotlin {
                 implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.koin.core)
                 implementation(libs.koin.annotations)
+            }
+        }
+
+        iosMain {
+            dependencies {
+                api(project(":mvvm-core"))
+                api(project(":mvvm-compose"))
+                api(project(":mvvm-koin"))
             }
         }
     }

@@ -20,7 +20,7 @@ class ScreenOneViewModel : UdfViewModel<ScreenOneState, ScreenOneSideEffect>() {
                 needToRemoveFirstScreen = withPopBackStack
             )
 
-            sideEffectChannel.send(effect)
+            _sideEffectFlow.emit(effect)
         }
     }
 }

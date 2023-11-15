@@ -1,6 +1,6 @@
 package io.github.dmitriy1892.kmm.sample.sample.di
 
-import io.github.dmitriy1892.kmm.mvvm.compose.store.ViewModelStore
+import io.github.dmitriy1892.kmm.mvvm.core.store.ViewModelStore
 import io.github.dmitriy1892.kmm.mvvm.core.BaseViewModel
 import io.github.dmitriy1892.kmm.mvvm.core.factory.BaseViewModelFactory
 import io.github.dmitriy1892.kmm.mvvm.core.viewModelKey

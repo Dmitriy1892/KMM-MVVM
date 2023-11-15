@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import io.github.dmitriy1892.kmm.mvvm.compose.ComposeViewModelApp
-import io.github.dmitriy1892.kmm.mvvm.compose.store.ViewModelStore
+import io.github.dmitriy1892.kmm.mvvm.core.store.ViewModelStore
 import io.github.dmitriy1892.kmm.mvvm.core.factory.BaseViewModelFactory
 import io.github.dmitriy1892.kmm.sample.sample.ui.one.ScreenOne
 import io.github.dmitriy1892.kmm.sample.sample.ui.two.ScreenTwo

@@ -19,13 +19,13 @@ class ScreenTwoViewModel(
             val sideEffect = if (isSuccess) ScreenTwoSideEffect.ShowSuccess
                 else ScreenTwoSideEffect.ShowError
 
-            sideEffectChannel.send(sideEffect)
+            _sideEffectFlow.emit(sideEffect)
         }
     }
 
     fun closeScreen() {
         viewModelScope.launch(Dispatchers.IO) {
-            sideEffectChannel.send(ScreenTwoSideEffect.CloseScreen)
+            _sideEffectFlow.emit(ScreenTwoSideEffect.CloseScreen)
         }
     }
 }

@@ -1,4 +1,4 @@
-package io.github.dmitriy1892.kmm.mvvm.compose.store
+package io.github.dmitriy1892.kmm.mvvm.core.store
 
 import io.github.dmitriy1892.kmm.mvvm.core.BaseViewModel
 import io.github.dmitriy1892.kmm.mvvm.core.factory.BaseViewModelFactory

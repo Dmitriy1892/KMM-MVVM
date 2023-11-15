@@ -1,13 +1,11 @@
 package io.github.dmitriy1892.kmm.mvvm.core
 
-import io.github.dmitriy1892.kmm.utils.coroutines.WrappedFlow
-import io.github.dmitriy1892.kmm.utils.coroutines.WrappedStateFlow
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.channels.Channel
+import io.github.dmitriy1892.kmm.utils.coroutines.flow.EventMutableSharedFlow
+import io.github.dmitriy1892.kmm.utils.coroutines.flow.WrappedSharedFlow
+import io.github.dmitriy1892.kmm.utils.coroutines.flow.WrappedStateFlow
+import io.github.dmitriy1892.kmm.utils.coroutines.flow.asWrappedSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.flowOn
-import kotlinx.coroutines.flow.receiveAsFlow
 
 abstract class UdfViewModel<State: Any, SideEffect: Any> : BaseViewModel() {
 
@@ -15,7 +13,7 @@ abstract class UdfViewModel<State: Any, SideEffect: Any> : BaseViewModel() {
     val screenState: WrappedStateFlow<State>
         get() = WrappedStateFlow(_screenState.asStateFlow())
 
-    protected val sideEffectChannel = Channel<SideEffect>()
-    val sideEffectFlow: WrappedFlow<SideEffect> =
-        WrappedFlow(sideEffectChannel.receiveAsFlow().flowOn(Dispatchers.Main.immediate))
+    protected val _sideEffectFlow = EventMutableSharedFlow<SideEffect>()
+    val sideEffectFlow: WrappedSharedFlow<SideEffect> =
+        _sideEffectFlow.asWrappedSharedFlow()
 }
