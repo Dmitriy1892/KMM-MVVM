@@ -1,5 +1,10 @@
 package io.github.dmitriy1892.kmm.mvvm.core
 
+import kotlin.experimental.ExperimentalObjCRefinement
+import kotlin.native.HiddenFromObjC
+
+@OptIn(ExperimentalObjCRefinement::class)
+@HiddenFromObjC
 @Retention(value = AnnotationRetention.BINARY)
 @Target(
     AnnotationTarget.CLASS,

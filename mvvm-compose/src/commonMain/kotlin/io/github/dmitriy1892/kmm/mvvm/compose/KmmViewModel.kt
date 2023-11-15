@@ -7,6 +7,8 @@ import io.github.dmitriy1892.kmm.mvvm.core.BaseViewModel
 import io.github.dmitriy1892.kmm.mvvm.core.InternalKmmMvvmApi
 import io.github.dmitriy1892.kmm.mvvm.core.factory.BaseViewModelFactory
 import io.github.dmitriy1892.kmm.mvvm.core.viewModelKey
+import kotlin.experimental.ExperimentalObjCRefinement
+import kotlin.native.HiddenFromObjC
 
 val KmmViewModelStore = compositionLocalOf<ViewModelStore> {
     error("ViewModelStore is not provided to the CompositionLocal named 'KmmViewModelStore'")
@@ -19,7 +21,8 @@ val KmmViewModelFactory = compositionLocalOf<BaseViewModelFactory> {
 /**
  * Use it with Compose Multiplatform
  */
-@OptIn(InternalKmmMvvmApi::class)
+@OptIn(InternalKmmMvvmApi::class, ExperimentalObjCRefinement::class)
+@HiddenFromObjC
 @Composable
 inline fun <reified T: BaseViewModel> kmmViewModel(
     key: String? = null,
@@ -28,6 +31,8 @@ inline fun <reified T: BaseViewModel> kmmViewModel(
 
 // Cannot to use T::class inside @Composable-function with generic type.
 // Issue: https://github.com/JetBrains/compose-multiplatform/issues/3147
+@OptIn(ExperimentalObjCRefinement::class)
+@HiddenFromObjC
 @InternalKmmMvvmApi
 inline fun <reified T: BaseViewModel> provideKmmViewModel(
     key: String?,
